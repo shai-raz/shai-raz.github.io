@@ -1,26 +1,31 @@
-const txt = ['Web Developer.', 'Programmer.']
+const txt = ['Programmer.', 'Web Developer.', 'Gamer.']
+const typingSpeed = 100
+const delayAfterDoneTyping = typingSpeed * 10
+const delayAfterDoneDeleting = typingSpeed * 5
 
 let countingUp = true
 let count = 0
 let txtId = 0
-let typingSpeed = 100
+
+let typeWriterDiv = document.getElementById('type-writer')
 
 const foo = () => {
     if (count > txt[txtId].length) {
         countingUp = false
         count -= 2
-        setTimeout(foo, typingSpeed*10)
+        setTimeout(foo, delayAfterDoneTyping)
         return
     } else if (count < 0) {
         countingUp = true
         count += 2
         txtId = (txtId + 1) % txt.length
-        setTimeout(foo, typingSpeed*5)
+        setTimeout(foo, delayAfterDoneDeleting)
         return
     }
-    typeWriterDiv = document.getElementById('type-writer')
+    
     typeWriterDiv.innerHTML = txt[txtId].slice(0, count)
     count += countingUp ? 1 : -1
+
     setTimeout(foo, typingSpeed)
 }
 
