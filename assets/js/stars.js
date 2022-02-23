@@ -57,6 +57,5 @@ const makeTheSkyShine = () => {
 makeTheSkyShine()
 
 window.onresize = () => {
-    
     makeTheSkyShine()
 }
