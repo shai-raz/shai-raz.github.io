@@ -45,8 +45,9 @@ const createStars = (numOfFrontStars, numOfBackStars) => {
     }
 }
 
+let minWindowDim = Math.min(window.innerWidth, window.innerHeight)
+
 const makeTheSkyShine = () => {
-    let minWindowDim = Math.min(window.innerWidth, window.innerHeight)
     let numOfFrontStars = Math.floor(minWindowDim / 5)
     let numOfBackStars = Math.floor(minWindowDim / 5)
 
@@ -57,5 +58,12 @@ const makeTheSkyShine = () => {
 makeTheSkyShine()
 
 window.onresize = () => {
-    makeTheSkyShine()
+    console.log(window.innerHeight)
+    newMinWindowDim = Math.min(window.innerWidth, window.innerHeight)
+
+    // avoid unnecessary re-rendering on mobile while scrolling (and url bar becomes in/visible)
+    if (newMinWindowDim != minWindowDim) {
+        minWindowDim = newMinWindowDim
+        makeTheSkyShine()
+    }
 }
