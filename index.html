@@ -12,6 +12,8 @@
     <script type="text/javascript" src="./assets/js/stars.js" defer></script>
     <script type="text/javascript" src="./assets/js/typer.js" defer></script>
     <script type="text/javascript" src="./assets/js/script.js" defer></script>
+    <script type="text/javascript" src="./assets/js/vanilla-tilt.min.js" defer></script>
+
 </head>
 
 <body>
@@ -51,20 +53,19 @@
             </a>
         </div>
 
-        <div class="star-container">
-            <div id="front-stars-container"></div>
-            <div id="back-stars-container"></div>
-        </div>
-
-        <div class="main-container vh-container">
+        <div class="main-container vh-container vh-container-center">
             <div class="main-intro-container">
                 <div class="main-intro-left">
                     <div class="main-img"></div>
                 </div>
                 <div class="main-intro-right">
                     <div class="main-text">
-                        <h1>Hi there!</h1>
-                        I'm Shai, a <div id="type-writer"></div>
+                        <div class="main-text-title">
+                            <h1>Hello!</h1>
+                        </div>
+                        <div class="main-text-body">
+                            I'm <strong>Shai</strong>, a <div id="type-writer"></div>
+                        </div>
                     </div>
                     <div class="main-socials">
                         <div class="main-socials-item">
@@ -89,27 +90,180 @@
 
         <div class="vh-container dark-to-light-bg" id="about-me">
             <div class="about-me-body">
-                <p>About me</p>
-                Lorem ipsum dolor sit amet consectetur.
+
+                <div class="about-me-text">
+                    What can I do?
+                </div>
+
+                <div class="about-me-gallery">
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-js-square"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-react xxx"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-css3"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-solid fa-c"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <div class="about-me-gallery-item">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
         <div class="vh-container light-to-dark-bg" id="projects">
             <div class="projects-body">
-                <p>Projects</p>
-                Lorem ipsum dolor sit amet consectetur.
+                <div class="projects-text">
+                    Some of my projects
+                </div>
+                <div class="projects-gallery">
+
+                    <div class="project-gallery-item hide" data-tilt>
+                        Watermelon
+                    </div>
+
+                    <div class="project-gallery-item" data-tilt>
+                        Avocado is Really Yummy
+                    </div>
+
+                    <div class="project-gallery-item" data-tilt>
+                        Strewberry
+                    </div>
+
+                    <div class="project-gallery-item" data-tilt>
+                        Cucumber
+                    </div>
+
+                    <div class="project-gallery-item" data-tilt>
+                        Tomato
+                    </div>
+
+                    <div class="project-gallery-item" data-tilt>
+                        Eggplant
+                    </div>
+
+                    <!--<div class="project-gallery-item">
+                        <div class="project-gallery-item-img">
+                            <img src="https://unsplash.it/200/200" alt="">
+                        </div>
+                        <div class="project-gallery-item-content">
+                            <div class="project-gallery-item-content-header">
+                                Project Apple
+                            </div>
+                            <div class="project-gallery-item-content-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quisquam officia
+                                molestias architecto. Quibusdam, ullam! Autem ducimus blanditiis iusto voluptatum illum
+                                alias possimus, error dolorem voluptate quod! Beatae porro doloremque laborum, deserunt
+                                a iure eaque repudiandae inventore velit omnis nobis.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery-item project-gallery-item-center">
+                        <div class="project-gallery-item-img">
+                            <img src="https://unsplash.it/200/200" alt="">
+                        </div>
+                        <div class="project-gallery-item-content">
+                            <div class="project-gallery-item-content-header">
+                                Project Avocado
+                            </div>
+                            <div class="project-gallery-item-content-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quisquam officia
+                                molestias architecto. Quibusdam, ullam! Autem ducimus blanditiis iusto voluptatum illum
+                                alias possimus, error dolorem voluptate quod! Beatae porro doloremque laborum, deserunt
+                                a iure eaque repudiandae inventore velit omnis nobis.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery-item project-gallery-item-end">
+                        <div class="project-gallery-item-img">
+                            <img src="https://unsplash.it/200/200" alt="">
+                        </div>
+                        <div class="project-gallery-item-content">
+                            <div class="project-gallery-item-content-header">
+                                Project Watermelon
+                            </div>
+                            <div class="project-gallery-item-content-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quisquam officia
+                                molestias architecto. Quibusdam, ullam! Autem ducimus blanditiis iusto voluptatum illum
+                                alias possimus, error dolorem voluptate quod! Beatae porro doloremque laborum, deserunt
+                                a iure eaque repudiandae inventore velit omnis nobis.
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div>
             </div>
         </div>
 
         <div class="vh-container dark-to-light-bg" id="contact">
-            <div class="projects-body">
-                <p>Contact</p>
-                Lorem ipsum dolor sit amet consectetur.
+            <div class="contact-body">
+                <div class="contact-title">
+                    Contact me
+                </div>
+                <div class="contact-text">
+                    If you got an offer in mind,
+                    <br class="mobile-line-break">
+                    or maybe you just want to say hi,
+                    <br>
+                    feel free to contact me on: <br>
+                    <div class="contact-list">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <a href="mailto:shayy9999@gmail.com">E-mail</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/shai-raz/">LinkedIn</a>
+                            </li>
+                        </ul>
+                        <!--<div class="contact-list-item">
+                            <i class="fa-brands fa-github"></i>
+                            <a href="mailto:shayy9999@gmail.com">E-mail</a>
+                        </div>
+                        <div class="contact-list-item">
+                            <i class="fa-brands fa-github"></i>
+                            <a href="https://www.linkedin.com/in/shai-raz/">LinkedIn</a>
+                        </div>0--->
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
 
         <div class="footer">
 
+        </div>
+
+        <div class="star-container">
+            <div id="front-stars-container"></div>
+            <div id="back-stars-container"></div>
         </div>
     </div>
 
