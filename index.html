@@ -13,7 +13,7 @@
     <script type="text/javascript" src="./assets/js/typer.js" defer></script>
     <script type="text/javascript" src="./assets/js/script.js" defer></script>
     <script type="text/javascript" src="./assets/js/vanilla-tilt.min.js" defer></script>
-
+    <script src="assets/js/scrollfade-0.1.js" defer></script>
 </head>
 
 <body>
@@ -56,12 +56,14 @@
         <div class="main-container vh-container vh-container-center">
             <div class="main-intro-container">
                 <div class="main-intro-left">
-                    <div class="main-img"></div>
+                    <div class="main-img">
+                        <div class="main-img-shine"></div>
+                    </div>
                 </div>
                 <div class="main-intro-right">
                     <div class="main-text">
                         <div class="main-text-title">
-                            <h1>Hello!</h1>
+                            Hello!
                         </div>
                         <div class="main-text-body">
                             I'm <strong>Shai</strong>, a <div id="type-writer"></div>
@@ -89,12 +91,14 @@
         </div>
 
         <div class="vh-container dark-to-light-bg" id="about-me">
-            <div class="about-me-body">
+            <div class="about-me-body scrollFade">
 
                 <div class="about-me-text">
-                    What can I do?
+                    A little bit <br class="show-on-mobile"> about me
                     <p class="about-me-subtext show-on-desktop">
-                        And some more..
+                        I'm a 3rd year Computer Science student.<br>
+                        I love coding, and I've been doing it ever since I was in High School.<br>
+                        These are some of the technologies I've been working with recently.
                     </p>
                 </div>
 
@@ -133,14 +137,16 @@
                 </div>
 
                 <div class="about-me-subtext-mobile show-on-mobile">
-                    And some more..
+                    I'm a 3rd year Computer Science student, graduating in July.<br>
+                    I love coding, and I've been doing it ever since I was in High School.<br>
+                    These are the languages I've been mainly working with recently.
                 </div>
 
             </div>
         </div>
 
         <div class="vh-container light-to-dark-bg" id="projects">
-            <div class="projects-body">
+            <div class="projects-body scrollFade">
                 <div class="projects-text">
                     Some of my projects
                 </div>
@@ -226,7 +232,7 @@
         </div>
 
         <div class="vh-container dark-to-light-bg" id="contact">
-            <div class="contact-body">
+            <div class="contact-body scrollFade">
                 <div class="contact-title">
                     Contact me
                 </div>
@@ -235,29 +241,31 @@
                     <br class="show-on-mobile">
                     or maybe you just want to say hi,
                     <br>
-                    feel free to contact me on: <br>
-                    <div class="contact-list">
-                        <ul>
-                            <li>
+                    feel free to contact me:
+                </div>
+                <div class="contact-list">
+                    <ul>
+                        <li class="paperclip">
+                            <a href="mailto:shayy9999@gmail.com">
                                 <i class="fa-solid fa-paperclip"></i>
-                                <a href="mailto:shayy9999@gmail.com">E-mail</a>
-                            </li>
-                            <li>
+                                E-mail
+                            </a>
+                        </li>
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/in/shai-raz/">
                                 <i class="fa-brands fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/shai-raz/">LinkedIn</a>
-                            </li>
-                        </ul>
-                        <!--<div class="contact-list-item">
-                            <i class="fa-brands fa-github"></i>
-                            <a href="mailto:shayy9999@gmail.com">E-mail</a>
-                        </div>
-                        <div class="contact-list-item">
-                            <i class="fa-brands fa-github"></i>
-                            <a href="https://www.linkedin.com/in/shai-raz/">LinkedIn</a>
-                        </div>0--->
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                    <!--<div class="contact-list-item">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="mailto:shayy9999@gmail.com">E-mail</a>
                     </div>
-
-
+                    <div class="contact-list-item">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://www.linkedin.com/in/shai-raz/">LinkedIn</a>
+                    </div>0--->
                 </div>
 
             </div>

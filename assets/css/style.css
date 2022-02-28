@@ -58,6 +58,25 @@ body {
     font-size: clamp(1.1rem, 3.2vw, 1.5rem);
 }
 
+.scrollFade {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.scrollFade--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scrollFade--visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.scrollFade--animate {
+    transition: opacity 1s ease-in-out;
+}
+
 .fa-linkedin:hover,
 .linkedin:hover a,
 .linkedin:hover .fa-linkedin {
@@ -226,7 +245,7 @@ body {
     height: 5.2em;
     margin: .25em 0 .25em 0;
     border-radius: 100%;
-    background: url("../images/shaibig.png") no-repeat center center;
+    background: url("../images/shaibbb.png") no-repeat center center;
     background-size: cover;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.322);
     z-index: 100;
@@ -243,7 +262,7 @@ body {
     transform: rotate(-20deg);
     opacity: 0.15;
     pointer-events: none;
-    animation: shine .9s cubic-bezier(0,-0.79, 0.24, 1.59) 1;
+    animation: shine .9s cubic-bezier(0, -0.79, 0.24, 1.59) 1;
     transition: all .3s ease-out;
 }
 
@@ -367,7 +386,7 @@ body {
 
 .project-gallery-item:nth-child(2) {
     grid-area: 1 / 2 / span 2 / span 2;
-    background: url('https://unsplash.it/seed/454/2560/1440') no-repeat center fixed;
+    background: url('https://unsplash.it/seed/454/1200/1200') no-repeat center fixed;
     writing-mode: horizontal-tb;
     background-size: cover;
     justify-content: center;
