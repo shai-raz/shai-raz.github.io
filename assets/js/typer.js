@@ -1,5 +1,6 @@
 const txt = ['Programmer.', 'Web Developer.', 'Gamer.']
 const typingSpeed = 100
+const deletingSpeed = 75
 const delayAfterDoneTyping = typingSpeed * 10
 const delayAfterDoneDeleting = typingSpeed * 5
 
@@ -26,7 +27,7 @@ const foo = () => {
     typeWriterDiv.innerHTML = txt[txtId].slice(0, count)
     count += countingUp ? 1 : -1
 
-    setTimeout(foo, typingSpeed)
+    setTimeout(foo, countingUp ? typingSpeed : deletingSpeed)
 }
 
 setTimeout(foo, typingSpeed)
