@@ -1,45 +1,27 @@
-/*const isScrolledIntoView = (elem) => {
-    var docViewTop = $(window).scrollTop()
-    var docViewBottom = docViewTop + $(window).height()
+/* img shine */
+/*let img = document.getElementsByClassName('main-img')[0]
+let imgShine = document.getElementsByClassName('main-img-shine')[0]
 
-    var elemTop = $(elem).offset().top
-    var elemBottom = elemTop + $(elem).height()
+let animationComeplete = false
+const animationDelay = 0.8 * 1000
+setTimeout(() => animationComplete = true, animationDelay)
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
-}
-
-rightContainerDiv = document.getElementById('right-container')
-
-window.onscroll = (e) => {
-    isScrolledIntoView(rightContainerDiv)
-    // scroll to div
-    $('html, body').animate({
-        scrollTop: $(".right-container").offset().top
-    }, 1000);
-} */
-/*var lastScrollTop = 0
-window.addEventListener('scroll', function () {
-    var st = window.pageYOffset || document.documentElement.scrollTop
-    if (st > lastScrollTop) {
-        // downscroll code
-        console.log('down')
-        var element = document.querySelector('.right-container');
-        var position = element.getBoundingClientRect()
-
-        // checking whether fully visible
-        if (position.top >= 0 && position.bottom <= window.innerHeight) {
-            console.log('Element is fully visible in screen')
-        }
-
-        // checking for partial visibility
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-            // scroll to div
-            console.log('Element is partially visible in screen')
-            element.scrollIntoView()
-        }
-    } else {
-        // upscroll code
-        console.log('up')
+window.addEventListener('mousemove', (e) => {
+    if (!animationComplete) {
+        return
     }
-    lastScrollTop = st <= 0 ? 0 : st
+    
+    let clientX = e.clientX
+    let pos = clientX - img.offsetLeft
+    console.log(pos, img.offsetWidth)
+
+    // if mouse is inside img's x range
+    if (pos > 0 && pos < img.offsetWidth) {
+        imgShine.style.left = pos + 'px'
+    } else if (pos < 0) {
+        imgShine.style.left = '0'
+    } else if (pos > img.offsetWidth) {
+        console.log("bigger")
+        imgShine.style.left = img.offsetWidth - (imgShine.offsetWidth*0.7) + 'px'
+    }
 })*/
