@@ -25,3 +25,9 @@ window.addEventListener('mousemove', (e) => {
         imgShine.style.left = img.offsetWidth - (imgShine.offsetWidth*0.7) + 'px'
     }
 })*/
+
+const ricosUrl = 'https://github.com/shai-raz/ricos'
+const ricosDiv = document.getElementById("ricos")
+ricosDiv.addEventListener('click', () => {
+    window.open(ricosUrl, '_blank')
+})

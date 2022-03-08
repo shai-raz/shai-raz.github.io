@@ -372,6 +372,7 @@ body {
 }
 
 .projects-gallery {
+    min-width: 15em;
     display: grid;
     margin-top: 1em;
     grid-template-columns: repeat(3, 1fr);
@@ -398,34 +399,35 @@ body {
 
 .project-gallery-item:nth-child(1) {
     /*grid-area: 1 / 1;*/
-    background: url('https://unsplash.it/seed/1/600/600') no-repeat center center;
+    background: url('https://unsplash.it/seed/3/600/600') no-repeat center center;
     background-size: cover;
 }
 
 .project-gallery-item:nth-child(2) {
     grid-area: 1 / 2 / span 2 / span 2;
-    background: url('https://unsplash.it/seed/454/1200/1200') no-repeat center fixed;
+    background: url('../images/ricos.jpg') no-repeat center center;
     writing-mode: horizontal-tb;
     background-size: cover;
     justify-content: center;
     align-items: start;
+    color: rgb(54, 54, 54);
     z-index: 101;
 }
 
 .project-gallery-item:nth-child(3) {
     /*grid-area: 2 / 1 / span 1 / span 1;*/
-    background: url('https://unsplash.it/seed/4445/1200/1200') no-repeat center fixed;
+    background: url('https://unsplash.it/seed/5/1200/1200') no-repeat center fixed;
     background-size: cover;
 }
 
 .project-gallery-item:nth-child(4) {
     /*grid-area: 3 / 1 / span 1 / span 1;*/
-    background: url('https://unsplash.it/seed/31/600/600') no-repeat center center;
+    background: url('https://unsplash.it/seed/14/600/600') no-repeat center center;
 }
 
 .project-gallery-item:nth-child(5) {
     /*grid-area: 3 / 2 / span 1 / span 1;*/
-    background: url('https://unsplash.it/seed/412/1200/1200') no-repeat center fixed;
+    background: url('https://unsplash.it/seed/11/1200/1200') no-repeat center fixed;
     background-size: cover;
 }
 
@@ -560,6 +562,7 @@ body {
     }
 
     .projects-gallery {
+        min-width: 0;
         width: 95%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -600,6 +603,7 @@ body {
     }
 
     .projects-gallery {
+        min-width: 0;
         width: 80%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
