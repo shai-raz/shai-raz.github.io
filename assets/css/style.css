@@ -387,19 +387,20 @@ body {
     align-items: end;
     justify-content: center;
     writing-mode: vertical-rl;
-    padding: .15em;
+    padding: .25em;
     border-radius: .25em;
     color: rgb(224, 224, 224);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.322),
         0px 0px 10px rgba(0, 0, 0, 0.322) inset;
     border: 1px solid rgba(119, 136, 153, 0.637);
     z-index: 100;
+    font-size: .8em;
 
 }
 
 .project-gallery-item:nth-child(1) {
     /*grid-area: 1 / 1;*/
-    background: url('https://unsplash.it/seed/3/600/600') no-repeat center center;
+    background: url('https://unsplash.it/seed/50/600/600') no-repeat center center;
     background-size: cover;
 }
 
@@ -427,13 +428,13 @@ body {
 
 .project-gallery-item:nth-child(5) {
     /*grid-area: 3 / 2 / span 1 / span 1;*/
-    background: url('https://unsplash.it/seed/11/1200/1200') no-repeat center fixed;
+    background: url('https://unsplash.it/seed/53/1200/1200') no-repeat center fixed;
     background-size: cover;
 }
 
 .project-gallery-item:nth-child(6) {
     /*grid-area: 3 / 3 / span 1 / span 1;*/
-    background: url('https://unsplash.it/seed/1816/600/600') no-repeat center center;
+    background: url('https://unsplash.it/seed/54/600/600') no-repeat center center;
 }
 
 .contact-body {
