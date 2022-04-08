@@ -61,7 +61,7 @@ window.onresize = () => {
     console.log(window.innerHeight)
     newMinWindowDim = Math.min(window.innerWidth, window.innerHeight)
 
-    // avoid unnecessary re-rendering on mobile while scrolling (and url bar becomes in/visible)
+    // avoid unnecessary re-rendering on mobile while scrolling (and url bar becomes in/evisible)
     if (newMinWindowDim != minWindowDim) {
         minWindowDim = newMinWindowDim
         makeTheSkyShine()
