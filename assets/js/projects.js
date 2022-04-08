@@ -30,7 +30,7 @@ const projects = {
         "smallImage": imagesPath + "WebPortfolioCombinedNoReflection.png",
         "bigImage": imagesPath + "WebPortfolioCombined2.png",
         "reflectionMargin": true,
-        "githubLink": githubBaseURL + "Web-Portfolio",
+        "githubLink": githubBaseURL + "shai-raz.github.io",
         "title": "Web Portfolio",
         "text": `is the website you're in right now!
         Created with pure JavaScript, almost everything is made from scratch, even this very slider!
