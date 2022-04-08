@@ -12,7 +12,7 @@ const projects = {
         "title": "Ricos",
         "text": `is a web application,
         which is much like instagram, but for recipes.
-        It allows user to upload new recipes,
+        It allows users to upload new recipes,
         follow other users and read their recipes,
         like recipes, comment on recipes, and more.`,
         "technologies": ["React.js", "Node.js", "MySQL"]
