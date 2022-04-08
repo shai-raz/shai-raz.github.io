@@ -26,8 +26,8 @@ window.addEventListener('mousemove', (e) => {
     }
 })*/
 
-const ricosUrl = 'https://github.com/shai-raz/ricos'
-const ricosDiv = document.getElementById("ricos")
+/*const ricosUrl = 'https://github.com/shai-raz/ricos'
+const ricosDiv = document.getElementById("project-ricos")
 ricosDiv.addEventListener('click', () => {
     window.open(ricosUrl, '_blank')
-})
+})*/
