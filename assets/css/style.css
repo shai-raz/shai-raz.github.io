@@ -456,10 +456,9 @@ body {
     -wekbit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     transition: transform .3s;
-    --color-active-project: rgb(255, 255, 255);
+    --color-active-project-open: rgb(255, 255, 255);
     --color-active-project: linear-gradient(to top, #ffffff 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.897) 100%);
     --color-inactive-project: rgb(224, 224, 224);
-    /*--color-inactive-project: #dcdddd;*/
 }
 
 .projects-slider-item {
@@ -571,6 +570,7 @@ body {
     flex-flow: row wrap;
     transform: scale(2);
     transition: .25s cubic-bezier(0, 0.76, 0.53, 1.56);
+    background-color: var(--color-active-project-open);
 }
 
 .sliderActiveOpen .projects-slider-item-pic,
