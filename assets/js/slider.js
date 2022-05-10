@@ -12,6 +12,8 @@ let currentActiveIndex = Math.floor(sliderItems.length / 2)
 let currentActive = sliderItems[currentActiveIndex]
 let isCurrentActiveOpen = false
 
+var xTouchStart = null
+var yTouchStart = null
 
 /* Functions */
 const getProjectInfoHTML = (projectId) => {
@@ -31,20 +33,20 @@ const getProjectInfoHTML = (projectId) => {
     const reflectionClass = project.reflectionMargin ? "project-slider-item-pic-reflective" : ""
 
     return `
-    <i class="fa-brands fa-github"
-        onclick="window.open('${project.githubLink}','_blank');"></i>
-    <div class="projects-slider-item-pic">
-        <img src="${project.smallImage}" alt="${project.title}">
-    </div>
-    <div class="projects-slider-item-title">${project.title}</div>
-    <div class="projects-slider-item-open-top" id="project-ricos-slider-item-open-image">
-        <img src="${project.bigImage}" alt="${project.title}">
-    </div>
-    <div class="projects-slider-item-text ${reflectionClass}">
-    <strong>${project.title}</strong> ${project.text}
-    <p>${technologiesHTML}</p>
-    </div>
-    `
+        <i class="fa-brands fa-github" 
+            onclick="window.open('${project.githubLink}','_blank');"></i>
+        <div class="projects-slider-item-pic">
+            <img src="${project.smallImage}" alt="${project.title}">
+        </div>
+        <div class="projects-slider-item-title">${project.title}</div>
+        <div class="projects-slider-item-open-top" id="project-ricos-slider-item-open-image">
+            <img src="${project.bigImage}" alt="${project.title}">
+        </div>
+        <div class="projects-slider-item-text ${reflectionClass}">
+            <strong>${project.title}</strong> ${project.text}
+            <p>${technologiesHTML}</p>
+        </div>
+        `
 }
 
 // sets all the information from projects.js into the corresponding divs (by id)
@@ -58,6 +60,9 @@ const initProjectsInfo = () => {
 }
 
 const setActive = (element, index) => {
+    if (index < 0 || index > sliderItems.length - 1)
+        return
+
     // remove active class from current active element
     currentActive.classList.remove("sliderActive")
     currentActive.classList.remove("sliderActiveOpen")
@@ -76,6 +81,8 @@ const setActive = (element, index) => {
     let sliderItemWidth = element.offsetWidth
     let transform3dX = (currentActiveIndex - Math.floor(sliderItems.length / 2)) * -sliderItemWidth
     sliderContainerDiv.style.transform = `translate3d(${transform3dX}px,0,0)`
+
+    console.log(currentActiveIndex)
 }
 
 const setInactiveStyles = () => {
@@ -123,8 +130,39 @@ const hideProjectInfo = (element) => {
     //setTimeout(()=>{picDiv.style.transition = ".2s ease-in-out"},0)
 }
 
+const handleTouchStart = (e) => {
+    xTouchStart = e.touches[0].clientX
+    yTouchStart = e.touches[0].clientY
+}
+
+function handleTouchEnd(e) {
+    if (!xTouchStart || !yTouchStart)
+        return
+
+    let xTouchEnd = e.changedTouches[0].clientX
+    let yTouchEnd = e.changedTouches[0].clientY
+
+    let xDiff = xTouchEnd - xTouchStart
+    let yDiff = yTouchEnd - yTouchStart
+
+    // horizontal swipe
+    if (Math.abs(xDiff) < Math.abs(yDiff))
+        return
+
+    if (xDiff > 0) {
+        setActive(sliderItems[currentActiveIndex - 1], currentActiveIndex - 1)
+        console.log("swipe left")
+    } else if (xDiff < 0) {
+        setActive(sliderItems[currentActiveIndex + 1], currentActiveIndex + 1)
+        console.log("swipe right")
+    }
+}
+
 const main = () => {
     initProjectsInfo()
+
+    sliderContainerDiv.addEventListener("touchstart", handleTouchStart)
+    sliderContainerDiv.addEventListener("touchend", handleTouchEnd)
 
     // set center element to be the first active element
     setActive(currentActive, currentActiveIndex)
